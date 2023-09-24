@@ -1,7 +1,4 @@
-//Hacer una función que tenga un parámetro de entrada que sea un array y en el cual se implemente un algoritmo de ordenación QuickSort. Criterios:
-//Debe ser recursivo
-
-
+//Quicksort recursivo
 const numeros = [8,1,5,14,4,15,12,6,2,11,10,7,9]; 
 
 
