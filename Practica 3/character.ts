@@ -44,13 +44,10 @@ const getCharacter = async (id: number):Promise<Character> => {
 
 
     return character;
-
-    
-    
-    
-
-
-
 }
+
+
+
+
 
 export { getCharacter, Character };
