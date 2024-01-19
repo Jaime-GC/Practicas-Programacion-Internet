@@ -15,7 +15,7 @@ console.info("Connected to MongoDB");
 const app = express();
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express funciona correctamente");
+  res.send("Express funciona correctamente (examen final)");
 });
 
 app.listen(3000, () => {
