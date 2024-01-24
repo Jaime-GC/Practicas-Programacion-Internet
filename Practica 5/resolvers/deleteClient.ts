@@ -1,3 +1,4 @@
+//deleteClient.ts
 import { Request, Response } from "npm:express@4.18.2";
 import ClientModel from "../db/client.ts";
 import mongoose from "npm:mongoose@7.6.3";

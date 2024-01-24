@@ -1,3 +1,4 @@
+//types.ts
 import mongoose from "npm:mongoose@7.6.3";
 
 export type Client = {

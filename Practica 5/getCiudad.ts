@@ -13,7 +13,7 @@ const getCiudad = async (iso: string, zipcode: string):Promise<string> => {
     const data = await fetch(url); 
 
     if (data.status !== 200) {
-        throw new Error('Cannot fetch the data on getCiudad');
+        throw new Error('Cannot fetch the data');
     }
 
     const json = await data.json(); 

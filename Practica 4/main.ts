@@ -21,7 +21,6 @@ const MONGO_URL = env.MONGO_URL || Deno.env.get("MONGO_URL");
 
 if (!MONGO_URL) {
   console.log("No mongo URL found");
-  
 }
 
 

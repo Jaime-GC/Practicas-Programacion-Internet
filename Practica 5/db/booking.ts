@@ -36,27 +36,7 @@ bookingSchema.pre('save', async function(next) {
   }
 });
 
-// Middleware para eliminar una reserva
-bookingSchema.pre('findOneAndDelete', { document: true, query: false }, async function (next) {
-  try {
-    const booking = this as BookingModelType;
-    console.log("Borrando reserva");
 
-    await ClientModel.findOneAndUpdate(
-      { _id: booking.client },
-      { $pull: { bookings: booking._id } }
-    );
-
-    await RestauranteModel.findOneAndUpdate(
-      { _id: booking.restaurante },
-      { $pull: { bookings: booking._id } }
-    );
-
-    next();
-  } catch (error) {
-    next(error);
-  }
-});
 
 
 export type BookingModelType = mongoose.Document & Omit<Booking, "id">;

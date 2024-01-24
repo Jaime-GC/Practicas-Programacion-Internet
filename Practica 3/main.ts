@@ -159,7 +159,7 @@ app.get("/", (req: Request, res: Response) => {
     res.send(filterDimension);
 })
 
-//elimina caracteres segun id que le pasemos
+
 .get("/character/delete/:id", (req: Request, res: Response) => {
 
     const id: number = parseInt(req.params.id);

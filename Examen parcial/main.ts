@@ -6,6 +6,7 @@ import addContacto from "./resolvers/addContacto.ts";
 import getContacto from "./resolvers/getContacto.ts";
 import updateContacto from "./resolvers/updateContacto.ts";
 import deleteContacto from "./resolvers/deleteContacto.ts";
+import getContactos from "./resolvers/getContactos.ts";
 
 
 const env = await load();
@@ -28,7 +29,7 @@ app
 
 
   .get("/api/contactos/:dni", getContacto)
-
+  .get("/api/contactos", getContactos)
   .post("/api/contactos", addContacto)
   .put("/api/contactos/:dni", updateContacto)
   .delete("/api/contactos/:dni", deleteContacto);

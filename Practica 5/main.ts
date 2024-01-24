@@ -13,6 +13,7 @@ import deleteBooking from "./resolvers/deleteBooking.ts";
 import deleteRestaurante from "./resolvers/deleteRestaurante.ts";
 import deleteClient from "./resolvers/deleteClient.ts";
 import deleteRestaurantes from "./resolvers/deleteRestaurantes.ts";
+import getClients from "./resolvers/getClients.ts";
 
 
 
@@ -46,7 +47,8 @@ try {
   app.get("/test", (req: Request, res: Response) => {
       res.send("Express funciona correctamente");
   }) 
-      .get("/getClient/:clienteId", getClient)
+      .get("/getClient/:clienteId/:countrycode/:zipcode", getClient)
+      .get("/getClients", getClients)
       .get("/getRestaurante/:restauranteId", getRestaurante)
       .get("/getBooking/:bookingId", getBooking)
       .post("/addClient", addClient)

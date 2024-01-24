@@ -1,5 +1,7 @@
+//addClient.ts
 import { Request, Response } from "npm:express@4.18.2";
 import ClientModel from "../db/client.ts";
+import BookingModel from "../db/booking.ts";
 import mongoose from "npm:mongoose@7.6.3";
 import formatId from "../main.ts";
 
@@ -28,6 +30,9 @@ const addClient = async (req: Request, res: Response) => {
     }
 
     const newCliente = new ClientModel({_id: idModificado, firstName, lastName, email, phoneNumber, DNI, bookings });
+    
+
+
     await newCliente.save();
 
     res.status(200).send({

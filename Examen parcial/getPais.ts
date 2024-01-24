@@ -7,7 +7,7 @@ const getPais = async (iso: string):Promise<string> => {
     const data = await fetch(url); 
 
     if (data.status !== 200) {
-        throw new Error('Cannot fetch the data');
+        throw new Error('Cannot fetch the data of getPais');
     }
 
     const json = await data.json(); 
