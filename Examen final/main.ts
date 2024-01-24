@@ -1,7 +1,7 @@
 //main.ts
 import mongoose from "npm:mongoose@8.0.1";
-import { ApolloServer } from "npm:@apollo/server@^4.9.5";
-import startStandaloneServer from "npm:@apollo/server@^4.9.5/standalone"
+import {ApolloServer} from "npm:@apollo/server@^4.9.5";
+import {startStandaloneServer} from "npm:@apollo/server@^4.9.5/standalone"
 
 import { Query } from "./resolvers/query.ts";
 import { Mutation } from "./resolvers/mutation.ts";
